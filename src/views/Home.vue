@@ -75,7 +75,7 @@
 	export default {
 		data() {
 			return {
-				sysName:'VUEADMIN',
+				sysName:'大数据可视化平台',
 				collapsed:false,
 				sysUserName: '',
 				sysUserAvatar: '',

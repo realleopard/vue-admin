@@ -7,9 +7,10 @@ import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
-import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
-
+import line from './views/charts/line.vue'
+import bar from './views/charts/bar.vue'
+import area from './views/charts/area-stack.vue'
 let routes = [
     {
         path: '/login',
@@ -27,7 +28,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航一',
+        name: '表格数据',
         iconCls: 'el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
@@ -39,7 +40,7 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航二',
+        name: '测试菜单',
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/page4', component: Page4, name: '页面4' },
@@ -49,20 +50,13 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '',
-        iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
-        children: [
-            { path: '/page6', component: Page6, name: '导航三' }
-        ]
-    },
-    {
-        path: '/',
-        component: Home,
-        name: 'Charts',
+        name: '图表数据',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/echarts', component: echarts, name: 'echarts' }
+            { path: '/echarts', component: echarts, name: '全部示例' },
+            { path: '/charts/line', component: line, name: '折线图' },
+            { path: '/charts/bar', component: bar, name: '条形图' },
+            { path: '/charts/area', component: area, name: '区域堆积图'},
         ]
     },
     {
